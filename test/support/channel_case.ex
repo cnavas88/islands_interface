@@ -20,14 +20,12 @@ defmodule IslandsInterface.ChannelCase do
       # Import conveniences for testing with channels
       use Phoenix.ChannelTest
 
-
       # The default endpoint for testing
-      @endpoint IslandsInterface.Endpoint
+      @endpoint IslandsInterfaceWeb.Endpoint
     end
   end
 
-  setup tags do
-
+  setup _tags do
     :ok
   end
 end

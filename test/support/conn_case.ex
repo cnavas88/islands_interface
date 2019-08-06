@@ -20,15 +20,14 @@ defmodule IslandsInterface.ConnCase do
       # Import conveniences for testing with connections
       use Phoenix.ConnTest
 
-      import IslandsInterface.Router.Helpers
+      import IslandsInterfaceWeb.Router.Helpers
 
       # The default endpoint for testing
-      @endpoint IslandsInterface.Endpoint
+      @endpoint IslandsInterfaceWeb.Endpoint
     end
   end
 
-  setup tags do
-
+  setup _tags do
     {:ok, conn: Phoenix.ConnTest.build_conn()}
   end
 end
