@@ -1,4 +1,4 @@
-defmodule IslandsInterface.Gettext do
+defmodule IslandsInterfaceWeb.Gettext do
   @moduledoc """
   A module providing Internationalization with a gettext-based API.
 

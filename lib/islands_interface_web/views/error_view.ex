@@ -1,5 +1,5 @@
-defmodule IslandsInterface.ErrorView do
-  use IslandsInterface.Web, :view
+defmodule IslandsInterfaceWeb.ErrorView do
+  use IslandsInterfaceWeb, :view
 
   def render("404.html", _assigns) do
     "Page not found"

@@ -1,4 +1,4 @@
-defmodule IslandsInterface.ErrorHelpers do
+defmodule IslandsInterfaceWeb.ErrorHelpers do
   @moduledoc """
   Conveniences for translating and building error messages.
   """
@@ -32,9 +32,9 @@ defmodule IslandsInterface.ErrorHelpers do
     #     dgettext "errors", "is invalid"
     #
     if count = opts[:count] do
-      Gettext.dngettext(IslandsInterface.Gettext, "errors", msg, msg, count, opts)
+      Gettext.dngettext(IslandsInterfaceWeb.Gettext, "errors", msg, msg, count, opts)
     else
-      Gettext.dgettext(IslandsInterface.Gettext, "errors", msg, opts)
+      Gettext.dgettext(IslandsInterfaceWeb.Gettext, "errors", msg, opts)
     end
   end
 end

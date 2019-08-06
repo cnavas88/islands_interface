@@ -1,7 +1,7 @@
-defmodule IslandsInterface.Endpoint do
+defmodule IslandsInterfaceWeb.Endpoint do
   use Phoenix.Endpoint, otp_app: :islands_interface
 
-  socket "/socket", IslandsInterface.UserSocket
+  socket "/socket", IslandsInterfaceWeb.UserSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #
@@ -38,5 +38,5 @@ defmodule IslandsInterface.Endpoint do
     key: "_islands_interface_key",
     signing_salt: "9nRzp5HV"
 
-  plug IslandsInterface.Router
+  plug IslandsInterfaceWeb.Router
 end

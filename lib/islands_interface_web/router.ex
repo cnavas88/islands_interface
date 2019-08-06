@@ -1,5 +1,5 @@
-defmodule IslandsInterface.Router do
-  use IslandsInterface.Web, :router
+defmodule IslandsInterfaceWeb.Router do
+  use IslandsInterfaceWeb, :router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,11 +13,10 @@ defmodule IslandsInterface.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", IslandsInterface do
-    pipe_through :browser # Use the default browser stack
+  scope "/", IslandsInterfaceWeb do
+    pipe_through :browser
 
-    get "/", PageController, :index
+    get "/",      PageController, :index
     post "/test", PageController, :test
   end
-
 end

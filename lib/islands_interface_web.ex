@@ -1,4 +1,4 @@
-defmodule IslandsInterface.Web do
+defmodule IslandsInterfaceWeb do
   @moduledoc """
   A module that keeps using definitions for controllers,
   views and so on.
@@ -16,24 +16,19 @@ defmodule IslandsInterface.Web do
   below.
   """
 
-  def model do
-    quote do
-      # Define common model functionality
-    end
-  end
-
   def controller do
     quote do
-      use Phoenix.Controller
+      use Phoenix.Controller, namespace: IslandsInterfaceWeb
 
-      import IslandsInterface.Router.Helpers
-      import IslandsInterface.Gettext
+      import IslandsInterfaceWeb.Router.Helpers
+      import IslandsInterfaceWeb.Gettext
     end
   end
 
   def view do
     quote do
-      use Phoenix.View, root: "web/templates"
+      use Phoenix.View, root: "lib/islands_interface_web/templates",
+                        namespace: IslandsInterfaceWeb
 
       # Import convenience functions from controllers
       import Phoenix.Controller, only: [get_csrf_token: 0, get_flash: 2, view_module: 1]
@@ -41,9 +36,9 @@ defmodule IslandsInterface.Web do
       # Use all HTML functionality (forms, tags, etc)
       use Phoenix.HTML
 
-      import IslandsInterface.Router.Helpers
-      import IslandsInterface.ErrorHelpers
-      import IslandsInterface.Gettext
+      import IslandsInterfaceWeb.Router.Helpers
+      import IslandsInterfaceWeb.ErrorHelpers
+      import IslandsInterfaceWeb.Gettext
     end
   end
 
@@ -56,7 +51,7 @@ defmodule IslandsInterface.Web do
   def channel do
     quote do
       use Phoenix.Channel
-      import IslandsInterface.Gettext
+      import IslandsInterfaceWeb.Gettext
     end
   end
 

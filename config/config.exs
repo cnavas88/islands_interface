@@ -6,12 +6,14 @@
 use Mix.Config
 
 # Configures the endpoint
-config :islands_interface, IslandsInterface.Endpoint,
+config :islands_interface, IslandsInterfaceWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "PnGX3CqqEBHzK0axWBjY62vaDiZ3B8NbNSdw2k86epR7v8uQAyyNByacXSUodqNw",
-  render_errors: [view: IslandsInterface.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: IslandsInterface.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+  render_errors: [view: IslandsInterfaceWeb.ErrorView, accepts: ~w(html json)],
+  pubsub: [
+    name: IslandsInterface.PubSub,
+    adapter: Phoenix.PubSub.PG2
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,

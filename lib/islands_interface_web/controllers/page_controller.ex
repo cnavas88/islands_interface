@@ -1,5 +1,5 @@
-defmodule IslandsInterface.PageController do
-  use IslandsInterface.Web, :controller
+defmodule IslandsInterfaceWeb.PageController do
+  use IslandsInterfaceWeb, :controller
 
   alias IslandsEngine.GameSupervisor
 
