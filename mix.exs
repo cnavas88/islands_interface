@@ -16,8 +16,16 @@ defmodule IslandsInterface.Mixfile do
 
   def application do
     [
-      mod: {IslandsInterface, []},
-      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext, :islands_engine]
+      mod: {IslandsInterface.Application, []},
+      applications: [
+        :phoenix,
+        :phoenix_pubsub,
+        :phoenix_html,
+        :cowboy,
+        :logger,
+        :gettext,
+        :islands_engine
+      ]
     ]
   end
 

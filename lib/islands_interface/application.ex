@@ -1,11 +1,15 @@
-defmodule IslandsInterface do
+defmodule IslandsInterface.Application do
+  @moduledoc """
+  TODO
+  """
   use Application
 
   def start(_type, _args) do
     import Supervisor.Spec
 
     children = [
-      supervisor(IslandsInterfaceWeb.Endpoint, [])
+      supervisor(IslandsInterfaceWeb.Endpoint, []),
+      supervisor(IslandsInterfaceWeb.Presence, [])
     ]
 
     opts = [strategy: :one_for_one, name: IslandsInterface.Supervisor]
